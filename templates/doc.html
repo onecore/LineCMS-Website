@@ -140,8 +140,9 @@
                                        <p>Linking CSS,JS and other files into your HTML files</p><br>
                                        Use of <b>static_link(from='custom-theme',get='style.css')</b> template function, more detailed information about this function below.<br>
                                        <pre><code class="language-markup">&lt;!DOCTYPE html&gt; 
-&lt;html lang=&quot;en&quot;&gt;  
+&lt;html lang=&quot;en&quot;&gt;            {% raw %}
 &lt;link rel=&quot;stylesheet&quot; href=&quot;{{ static_link('custom-theme','style.css') }}&quot;&gt;
+                                            {% endraw %}
                                        </code></pre>
                                     </p>
                                     
@@ -194,6 +195,7 @@
                                     <p>Email templates can be editted from <b>Dashboard > Products > Settings</b> </p>
                                     <p><b>Fulfilled Template</b>: Is the template used when a Customer order has been Fulfilled (Completed)</p>
                                         <ul>
+                                            {% raw %}
                                             <li>
                                                 <b>{{ COMPANYNAME }}</b>: Loads the Name of your website
                                             </li>
@@ -241,6 +243,7 @@
                                                 <b>{{ CUSTOMERNAME }}</b>: Loads the customer name
                                             </li>
                                         </ul>
+                                        {% endraw %}
                                 </div><!--//section-block-->
                                 
                             </section>
@@ -254,11 +257,12 @@
                                     <p>File: index.html</p>
                                     <p>Avaiable template variables</p>
                                     <ul>
-                                        <li>
+                                        <li>   {% raw %}
                                             <p><b>{{ site.logo }}</b> returns website logo file name</p>
                                         </li>
                                         <li>
                                             <p><b>{{ site.title }}</b> returns website title</p>
+                                                {% endraw %}
                                         </li>
                                     </ul>
                                 </div><!--//section-block-->
