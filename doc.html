@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap project documentation theme for developers</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/li.png" class="img-fluid">
+                        </a>
+                    </h1>
+                    
+                </div><!--//branding-->
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Quick Start</li>
+                </ol>
+                
+                <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+	            
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+			            
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+			            
+			        </form>
+                </div>
+                
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: June 22nd</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <p>LineCMS is a Content Management System built using a Flask framework (Python 3.*), LineCMS Provides Custom Themes with Jinja Templating engine, 
+                                Shop functionality with Stripe's Payment Gateway and a blogging system, We also Use SQLite3</p>
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">Download</h2>
+                                <div class="section-block">
+                                    <p>Download the latet version of LineCMS
+                                    </p>
+                                    <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/docs-free-bootstrap-theme-for-developers-and-startups/" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download LineCMS</a>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="installation-section" class="doc-section">
+                                <h1 class="section-title">Installation</h1>
+                                <div id="step1"  class="section-block">
+                                    <h5 class="block-title">Download requirements</h5>
+                                    <p>LineCMS requires some python dependency, 
+                                    </p>
+                                    <p>Install requirements using pip (LineCMS Requires Python >= 3.x.x)</p>
+                                    <div class="code-block">
+                                        <h6>Navigate to LineCMS folder, Console:</h6>
+                                        <p><code>pip install requirements.txt</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="step2"  class="section-block"> 
+                                    <h3 class="block-title">Run in Debug mode (Development)</h3>
+                                    <p>Tweaks and test the CMS
+                                    </p>
+                                        <div id="step1"  class="section-block">
+                                            <h3 class="block-title">Console</h3>
+                                            <p>export Debug mode and Run</p>
+                                            <div class="code-block">
+                                            <h6>Navigate to LineCMS folder, Console:</h6>
+                                                <p><code>> export FLASK_DEBUG=1</code></p>
+                                                <p><code>> flask run</code></p>
+                                            </div><!--//code-block-->
+                                        </div><!--//section-block-->
+                                </div><!--//section-block-->
+                                <div id="step3"  class="section-block">
+                                    <h3 class="block-title">Deploy on Heroku</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="step3"  class="section-block">
+                                    <h3 class="block-title">Deploy on Pythonanywhere</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+                                    </p>
+                                </div><!--//section-block-->
+
+                                <div id="step3"  class="section-block">
+                                    <h3 class="block-title">Install Credentials</h3>
+                                    <p>Once your server is running you can navigate to
+                                    </p>
+                                    <code>http://your-website-link/install</code> to add your Dashboard Credentials and redirected you to Dashboard once the installation is success.
+
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+                            <section id="temp-code-section" class="doc-section">
+                                <h2 class="section-title">Templates</h2>
+                                <div class="section-block">
+                                    <p>
+                                        Templates and resources files are split into 2 folders,<br>
+                                        <b>static</b> is where your resources (JS/HTML/Images etc..)<br>
+                                        <code>static/SYSTEM/custom-theme/</code><br>
+                                        <b>templates</b> folder is where your HTML files should be<br>
+                                        <code>templates/SYSTEM/custom-theme/</code><br>
+                                        
+                                        <p>Folder name should have the same name and a Theme.py where the theme information resides</p>
+                                        <p>To create your own theme folder you can copy the whole 'blank-theme' inside the LineCMS, update it and compress into .zip file then move the static/templates to its folders or simply Upload the zip file using dashboard</p>
+                                    
+                                    </p>
+                                    <p>
+                                       <h2 class="section-title">Linking resources</h2>
+
+                                       <p>Linking CSS,JS and other files into your HTML files</p><br>
+                                       Use of <b>static_link(from='custom-theme',get='style.css')</b> template function, more detailed information about this function below.<br>
+                                       <pre><code class="language-markup">&lt;!DOCTYPE html&gt; 
+&lt;html lang=&quot;en&quot;&gt;  
+&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ static_link('custom-theme','style.css') }}&quot;&gt;
+                                       </code></pre>
+                                    </p>
+                                    
+                                </div><!--//section-block-->
+
+                            <!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="temp-funcs" class="doc-section">
+                                <h2 class="section-title">Template functions</h2>
+                                <p>Functions below will only work within HTML Files</p>
+                                <div id="step1"  class="section-block">
+
+                                    <h2>Admin button</h2><p><code>admin_button()</code> <br>Shows a hyperlink button to Dashboard if the 'logged' session exists (Logged in), returns string (HTML button)</p>
+                                    <hr>
+                                    <h2>Linking Resources</h2><p><code>static_link(from='my-template',get='file.js')</code> <br>Loads the 'file.js' from 'my-template'</p>
+                                    <p>Available parameters:</p>
+                                        <ul>
+                                            <li>
+                                                <b>from</b>: (string) required, template name
+                                            </li>
+                                            <li>
+                                                <b>get</b>: (string) a file name you'd like to load (for JS, CSS and other resources files)
+                                            </li>
+                                            <li>
+                                                <b>get-image</b>: (string) an Image file name you'd like to load, 'get' parameter will be ignored.
+                                            </li>
+                                        </ul>                  
+                                    <h2>Load Products</h2><p><code>loadproducts(count=12,category="tech")</code> <br>Shows '12' products under 'tech' category, returns iterable tuple</p>
+                                    <p>Available parameters:</p>
+                                        <ul>
+                                            <li>
+                                                <b>count</b>: (integer) required, count of products to load 
+                                            </li>
+                                            <li>
+                                                <b>category</b>: (string) optional, loads under the specified category
+                                            </li>
+                                        </ul>
+                                </div><!--//section-block-->
+                                
+                            </section>
+
+
+                            <section id="temp-em" class="doc-section">
+                                <h2 class="section-title">Email templates (Enabled SMTP Required)</h2>
+                                <p>You will need to set-up your SMTP Settings enable to use the Templates below which will be sent to the customer's email</p>
+                                <p>SMTP settings can be updated thru <b>Dashboard > Products > Settings</b> and look for the <b>Email Settings</b></p>
+                                <div id="step1"  class="section-block">
+
+                                    <p>Email templates can be editted from <b>Dashboard > Products > Settings</b> </p>
+                                    <p><b>Fulfilled Template</b>: Is the template used when a Customer order has been Fulfilled (Completed)</p>
+                                        <ul>
+                                            <li>
+                                                <b>{{ COMPANYNAME }}</b>: Loads the Name of your website
+                                            </li>
+                                            <li>
+                                                <b>{{ COMPANYNUMBER }}</b>: Loads the Phone Number of your website
+                                            </li>
+                                            <li>
+                                                <b>{{ COMPANYEMAIL }}</b>: Loads the Email of your website
+                                            </li>
+                                            <li>
+                                                <b>{{ TRACKINGLINK }}</b>: Loads the Tracking link you supplied (Will show if not empty)
+                                            </li>
+                                            <li>
+                                                <b>{{ ORDERNUMBER }}</b>: Loads a unique system generated order number
+                                            </li>
+                                            <li>
+                                                <b>{{ ORDERTOTAL }}</b>: Loads the amount of orders (USD) from Stripe
+                                            </li>
+                                            <li>
+                                                <b>{{ ORDERDATE }}</b>: Loads the creation date of the order
+                                            </li>
+                                            <li>
+                                                <b>{{ CUSTOMERNAME }}</b>: Loads the customer name
+                                            </li>
+                                        </ul>
+
+                                    <p><b>Placed Template</b>: Is the template used when a Customer payment has been placed</p>
+                                        <ul>
+                                            <li>
+                                                <b>{{ COMPANYNAME }}</b>: Loads the Name of your website
+                                            </li>
+                                            <li>
+                                                <b>{{ COMPANYNUMBER }}</b>: Loads the Phone Number of your website
+                                            </li>
+                                            <li>
+                                                <b>{{ COMPANYEMAIL }}</b>: Loads the Email of your website
+                                            </li>
+                                            <li>
+                                                <b>{{ ORDERTOTAL }}</b>: Loads the amount of orders (USD) from Stripe
+                                            </li>
+                                            <li>
+                                                <b>{{ ORDERDATE }}</b>: Loads the creation date of the order
+                                            </li>
+                                            <li>
+                                                <b>{{ CUSTOMERNAME }}</b>: Loads the customer name
+                                            </li>
+                                        </ul>
+                                </div><!--//section-block-->
+                                
+                            </section>
+
+                            <section id="temp-pengine" class="doc-section">
+                                <h2 class="section-title">View templates</h2>
+                                <p>Below are the information of every views (HTML Files)</p>
+                                <p>LineCMS uses Jinja for its Templating system</p>
+                                <div id="p1"  class="section-block">
+                                    <h2>Index View</h2>
+                                    <p>File: index.html</p>
+                                    <p>Avaiable template variables</p>
+                                    <ul>
+                                        <li>
+                                            <p><b>{{ site.logo }}</b> returns website logo file name</p>
+                                        </li>
+                                        <li>
+                                            <p><b>{{ site.title }}</b> returns website title</p>
+                                        </li>
+                                    </ul>
+                                </div><!--//section-block-->
+                                 <div id="p2"  class="section-block">
+                                </div><!--//section-block-->
+                                 <div id="p3"  class="section-block">
+                                </div><!--//section-block-->
+                                 <div id="p4"  class="section-block">
+                                </div><!--//section-block-->
+                                 <div id="p5"  class="section-block">
+                                </div><!--//section-block-->
+                                 <div id="p6"  class="section-block">
+                                </div><!--//section-block-->
+                                
+                            </section>
+                            <!-- END -->
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+		                            <li class="nav-item">
+	                                    <a class="nav-link scrollto" href="#download-section">Download</a>
+		                            </li>
+		                            <li class="nav-item">
+	                                    <a class="nav-link scrollto" href="#installation-section">Installation</a>
+		                            </li>
+                                    <nav class="nav doc-sub-menu nav flex-column">
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#step1">Download requirements</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#step2">Run in your system</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#step3">Deployment</a>
+	                                    </li>
+                                    </nav><!--//nav-->
+                                    <li class="nav-item">
+	                                    <a class="nav-link scrollto" href="#temp-code-section">Templates</a>
+                                    </li>
+                                    
+                                    <nav class="nav doc-sub-menu nav flex-column">
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-code-section">Creating your own Template/Theme</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-funcs">Template Functions</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-em">Email Template</a>
+	                                    </li>
+	                                    <!-- <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">Endpoints (POST)</a>
+	                                    </li> -->
+                                    </nav><!--//nav-->
+                                    <li class="nav-item">
+	                                    <a class="nav-link scrollto" href="#temp-pengine">HTML Templates</a>
+                                    </li>
+                                    
+                                    <nav class="nav doc-sub-menu nav flex-column">
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#p1">Index view</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-funcs">Single Blog view</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-em">Blogs list view</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-em">Single Product view</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-em">Products list view</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-em">Product similar view</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#temp-em">Order success view</a>
+	                                    </li>
+	                                    <!-- <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">Endpoints (POST)</a>
+	                                    </li> -->
+                                    </nav><!--//nav-->
+
+                                    <li class="nav-item">
+	                                    <a class="nav-link scrollto" href="#temp-pengine">Modules</a>
+                                    </li>
+                                    
+                                    <nav class="nav doc-sub-menu nav flex-column">
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">Announcement</a>
+	                                    </li>
+ 	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">Image with Message</a>
+	                                    </li>
+ 	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">Uparrow</a>
+	                                    </li>
+ 	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">Social share</a>
+	                                    </li>
+ 	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">View embed</a>
+	                                    </li>
+ 	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#less">Extras</a>
+	                                    </li>
+                                        
+                                    </nav><!--//nav-->
+                                    <li class="nav-item">
+	                                    <a class="nav-link scrollto" href="#code-section">Payment Gateway setup</a>
+                                    </li>
+                                    <nav class="nav doc-sub-menu nav flex-column">
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#html">API Keys</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#css">Webhooks</a>
+	                                    </li>
+
+                                    </nav><!--//nav-->
+                                    <li class="nav-item">
+	                                    <a class="nav-link scrollto" href="#code-section">Settings file</a>
+                                    </li>
+                                    <nav class="nav doc-sub-menu nav flex-column">
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#html">Settings Information</a>
+	                                    </li>
+	                                    <li class="nav-item">
+                                            <a class="nav-link scrollto" href="#css">Other Information</a>
+	                                    </li>
+
+                                    </nav><!--//nav-->
+	                            </nav><!--//doc-menu-->
+	                        
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+ 
+        
+    </div><!--//page-wrapper-->
+    
+
+    
+     
+    <!-- Main Javascript -->          
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/prism/prism.js"></script>      
+    <script src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>                                                          
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
