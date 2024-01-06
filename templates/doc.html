@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="branding">
                     <h1 class="logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="assets/images/li.png" class="img-fluid">
                         </a>
                     </h1>
@@ -39,7 +39,7 @@
                 </div><!--//branding-->
                 
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active">Quick Start</li>
                 </ol>
                 
@@ -65,13 +65,13 @@
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
                             <p>LineCMS is a Content Management System built using a Flask framework (Python 3.*), LineCMS Provides Custom Themes with Jinja Templating engine, 
-                                Shop functionality with Stripe's Payment Gateway and a blogging system, We also Use SQLite3</p>
+                                Shop functionality with Stripe's Payment Gateway and a blogging system</p>
                             <section id="download-section" class="doc-section">
                                 <h2 class="section-title">Download</h2>
                                 <div class="section-block">
                                     <p>Download the latet version of LineCMS
                                     </p>
-                                    <a href="https://github.com/onecore/LineCMS/releases/download/v1.40/LineCMS.1.40.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download LineCMS</a>
+                                    <a href="https://github.com/onecore/LineCMS/releases/download/v1.40/LineCMS.1.40.zip" class="btn btn-purple" target="_blank"><i class="fas fa-download"></i> Download LineCMS</a>
                                 </div>
                             </section><!--//doc-section-->
                             <section id="installation-section" class="doc-section">
@@ -83,36 +83,26 @@
                                     <p>Install requirements using pip (LineCMS Requires Python >= 3.x.x)</p>
                                     <div class="code-block">
                                         <h6>Navigate to LineCMS folder, Console:</h6>
-                                        <p><code>pip install requirements.txt</code></p>
+                                        <p><code class="btn btn-dark rounded border">pip install -r requirements.txt</code> Install all required LineCMS Dependencies</p>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                                 <div id="step2"  class="section-block"> 
                                     <h3 class="block-title">Run in Debug mode (Development)</h3>
                                     <p>Tweaks and test the CMS
                                     </p>
-                                        <div id="step1"  class="section-block">
-                                            <h3 class="block-title">Console</h3>
-                                            <p>export Debug mode and Run</p>
-                                            <div class="code-block">
-                                            <h6>Navigate to LineCMS folder, Console:</h6>
-                                                <p><code>> export FLASK_DEBUG=1</code></p>
-                                                <p><code>> flask run</code></p>
-                                            </div><!--//code-block-->
-                                        </div><!--//section-block-->
-                                </div><!--//section-block-->
-                                <div id="step3"  class="section-block">
-                                    <h3 class="block-title">Deploy on Heroku</h3>
-                                </div><!--//section-block-->
-                                <div id="step3"  class="section-block">
-                                    <h3 class="block-title">Deploy on Pythonanywhere</h3>
- 
+                                    <h6>Navigate to LineCMS folder, Console:</h6>
+
+                                    <div class="code-block">
+                                        <p><code class="btn btn-dark rounded border">export FLASK_DEBUG=1</code> Enables Debug mode</p>
+                                        <p><code class="btn btn-dark rounded border">flask run</code> Run the CMS</p>
+                                    </div><!--//code-block-->
                                 </div><!--//section-block-->
 
                                 <div id="step3"  class="section-block">
                                     <h3 class="block-title">Install Credentials</h3>
                                     <p>Once your server is running you can navigate to
                                     </p>
-                                    <code>http://your-website-link/install</code> to add your Dashboard Credentials and redirected you to Dashboard once the installation is success.
+                                    <code class="btn btn-dark rounded border">http://your-website-link/install</code> to add your Dashboard Credentials and redirected you to Dashboard once the installation is success.
 
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
@@ -123,9 +113,9 @@
                                     <p>
                                         Templates and resources files are split into 2 folders,<br>
                                         <b>static</b> is where your resources (JS/HTML/Images etc..)<br>
-                                        <code>static/SYSTEM/custom-theme/</code><br>
+                                        <code class="btn btn-dark rounded border">static/SYSTEM/custom-theme/</code><br>
                                         <b>templates</b> folder is where your HTML files should be<br>
-                                        <code>templates/SYSTEM/custom-theme/</code><br>
+                                        <code class="btn btn-dark rounded border">templates/SYSTEM/custom-theme/</code><br>
                                         
                                         <p>Folder name should have the same name and a Theme.py where the theme information resides</p>
                                         <p>To create your own theme folder you can copy the whole 'blank-theme' inside the LineCMS, update it and compress into .zip file then move the static/templates to its folders or simply Upload the zip file using dashboard</p>
@@ -150,35 +140,79 @@
 
                             <section id="temp-funcs" class="doc-section">
                                 <h2 class="section-title">Template functions</h2>
-                                <p>Functions below will only work within HTML Files</p>
+                                <p>Functions for your HTML files</p>
                                 <div id="step1"  class="section-block">
 
-                                    <h2>Admin button</h2><p><code>admin_button()</code> <br>Shows a hyperlink button to Dashboard if the 'logged' session exists (Logged in), returns string (HTML button)</p>
+                                    <h2>Admin button</h2><p><code class="btn btn-warning rounded border  text-muted">admin_button()</code> Shows a hyperlink button to Dashboard if the 'logged' session exists (Logged in), returns string (HTML button)</p>
                                     <hr>
-                                    <h2>Linking Resources</h2><p><code>static_link(from='my-template',get='file.js')</code> <br>Loads the 'file.js' from 'my-template'</p>
-                                    <p>Available parameters:</p>
-                                        <ul>
-                                            <li>
-                                                <b>from</b>: (string) required, template name
-                                            </li>
-                                            <li>
-                                                <b>get</b>: (string) a file name you'd like to load (for JS, CSS and other resources files)
-                                            </li>
-                                            <li>
-                                                <b>get-image</b>: (string) an Image file name you'd like to load, 'get' parameter will be ignored.
-                                            </li>
-                                        </ul>                  
-                                    <h2>Load Products</h2><p><code>loadproducts(count=12,category="tech")</code> <br>Shows '12' products under 'tech' category, returns iterable tuple</p>
-                                    <p>Available parameters:</p>
-                                        <ul>
-                                            <li>
-                                                <b>count</b>: (integer) required, count of products to load 
-                                            </li>
-                                            <li>
-                                                <b>category</b>: (string) optional, loads under the specified category
-                                            </li>
-                                        </ul>
+                                    <h2>Resource loader</h2><p><code class="btn btn-warning rounded border  text-muted">link_for(theme='my-template',path='file.js')</code> 
+                                       Loads the 'file.js' from 'my-template' in /static/SYSTEM/ folder
+                                        <pre class="border">
+
+    Args:
+        theme (str): theme name
+        path (str): file name or a folder path to a file
+
+    Returns:
+        string: url of a file
+                                        </pre>             
+                                        <hr>     
+                                    <h2>Load Products</h2><p><code class="btn btn-warning rounded border  text-muted">load_products(counts=12,category="tech")</code> Shows '12' products under 'tech' category</p>
+                                        <pre class="border">
+
+    Args:
+        single (str, optional): product_id. Defaults to False.
+        search (str, required if single = False): title/description search. Defaults to None.
+        category (str, required if single = False): categorize search_. Defaults to None.
+        offset (int, required if single = False): offset search. Defaults to 0.
+        per_page (int, required if single = False): per_page for navigation. Defaults to 3.
+
+    Returns:
+        tuple: products
+                                        </pre>
+
+
+                                        <hr>     
+                                    <h2>Load Blogs</h2><p><code class="btn btn-warning rounded border text-muted">load_blogs(counts=[0,5])</code> Load blogs with offset [0,5]</p>
+                                        <pre class="border">
+
+    Args:
+        count (int [offset,offset], default): uses SQLite Limit. Defaults to 5.
+        single (str, optional): blog route, loads single blog post. Defaults to False.
+
+    Returns:
+        tuple: blogs
+                                        </pre>
+
+                                        <hr>     
+                                    <h2>Set Attribute</h2><p><code class="btn btn-warning rounded border text-muted">setattribute('product',my_product)</code> <br>
+                                        Purpose of setattribute() is to assign an attribute name base on column index from database,<br>
+                                        instead of retrieving a 'category' value using <u>product[3]</u> you can use <u>product.category.</u>
+                                        It's good to include <b>setattribute()</b> inside a Jinja's for loop.<br>
+                                        example below with using 'product' as first argument to let LineCMS that it's a product object,<br>
+                                        followed by iterable my_product object from database,<br>
+                                        available keys:  'product','blog','site','mod','orders'
+                                        
+                                    </p>
+<pre class="border">
+{% raw %}
+<xmp>
+    {% for my_products in load_products(counts=[0,3]) %}            // jinja for-loop using load_products()
+      {% set product = setattribute('product', my_products) %}       // create a variable product contains setattribute()
+      
+      <p>This is {{ product.title }} and for sale for {{ product.price }}</p>
+
+    {% endfor %}
+</xmp>
+{% endraw %}
+</pre>
+<p>
+    Without 'setattribute()' function you will have to use indexing to get a value<br>
+    e.g to get 'category' value you have to use my_product[3] instead of my_product.category
+</p>
                                 </div><!--//section-block-->
+
+                                
                                 
                             </section>
 
@@ -295,9 +329,7 @@
 	                                    <li class="nav-item">
                                             <a class="nav-link scrollto" href="#step2">Run in your system</a>
 	                                    </li>
-	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#step3">Deployment</a>
-	                                    </li>
+
                                     </nav><!--//nav-->
                                     <li class="nav-item">
 	                                    <a class="nav-link scrollto" href="#temp-code-section">Templates</a>
@@ -319,20 +351,6 @@
                                     </nav><!--//nav-->
 
                                     <li class="nav-item">
-	                                    <a class="nav-link scrollto" href="#temp-code-section">Functions (Front-end)</a>
-                                    </li>
-                                    
-                                    <nav class="nav doc-sub-menu nav flex-column">
-	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-code-section">....</a>
-	                                    </li>
-
-	                                    <!-- <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#less">Endpoints (POST)</a>
-	                                    </li> -->
-                                    </nav><!--//nav-->
-
-                                    <li class="nav-item">
 	                                    <a class="nav-link scrollto" href="#temp-pengine">HTML Templates</a>
                                     </li>
                                     
@@ -341,22 +359,22 @@
                                             <a class="nav-link scrollto" href="#p1">Index view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-funcs">Single Blog view</a>
+                                            <a class="nav-link scrollto" href="#temp-em1">Single Blog view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em">Blogs list view</a>
+                                            <a class="nav-link scrollto" href="#temp-em2">Blogs list view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em">Single Product view</a>
+                                            <a class="nav-link scrollto" href="#temp-em3">Single Product view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em">Products list view</a>
+                                            <a class="nav-link scrollto" href="#temp-em4">Products list view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em">Product similar view</a>
+                                            <a class="nav-link scrollto" href="#temp-em5">Product similar view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em">Order success view</a>
+                                            <a class="nav-link scrollto" href="#temp-em6">Order success view</a>
 	                                    </li>
 	                                    <!-- <li class="nav-item">
                                             <a class="nav-link scrollto" href="#less">Endpoints (POST)</a>
