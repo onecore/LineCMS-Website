@@ -289,19 +289,212 @@
                                     <p>Avaiable template variables</p>
                                     <ul>
                                         <li>   {% raw %}
-                                            <p><b>{{ site.logo }}</b> returns website logo file name</p>
+                                            <p><b>{{ site.site_description }}</b> returns website logo file name</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>
+                                            {% raw %}
+                                            <p><b>{{ site.sitename }}</b> website name</p>
+                                                {% endraw %}
+                                        </li>                                        
+                                        <li>
+                                            {% raw %}
+                                            <p><b>{{ site.footer_copyright }}</b> returns website title</p>
+                                                {% endraw %}
+                                        </li>                                       
+                                         <li>
+                                            {% raw %}
+                                            <p><b>{{ site.logo }}</b> returns website logo file</p>
+                                                {% endraw %}
+                                        </li>
+                                         <li>
+                                            {% raw %}
+                                            <p><b>{{ site.favicon }}</b> returns website favicon icon</p>
+                                                {% endraw %}
                                         </li>
                                         <li>
-                                            <p><b>{{ site.title }}</b> returns website title</p>
+                                            {% raw %}
+                                            <p><b>{{ site.domain }}</b> returns website domain</p>
+                                                {% endraw %}
+                                        </li>                                        
+                                        <li>
+                                            {% raw %}
+                                            <p><b>{{ site.meta_description }}</b> returns website description</p>
+                                                {% endraw %}
+                                        </li>                                        
+                                        <li>
+                                            {% raw %}
+                                            <p><b>{{ site.meta_keywords }}</b> returns website keywords</p>
+                                                {% endraw %}
+
+                                        </li>                                        
+                                        <li>
+                                            {% raw %}
+                                            <p><b>{{ site.messages }}</b> returns website messages (Dict value)</p>
+                                                {% endraw %}
+                                        </li>
+                                        <li>
+                                            {% raw %}
+                                            <p><b>{{ site.site_phone }}</b> returns website phone number</p>
+                                                {% endraw %}
+                                        </li>
+                                        <li>
+                                            {% raw %}
+                                            <p><b>{{ site.site_email }}</b> returns website email</p>
+                                                {% endraw %}
+                                        </li>
+                                        <li>
+                                                {% raw %}
+                                            <p><b>{{ site.site_location }}</b> returns Address/Location</p>
                                                 {% endraw %}
                                         </li>
                                     </ul>
                                 </div><!--//section-block-->
                                  <div id="p2"  class="section-block">
+                                    <h2>Single Blog View</h2>
+                                    <p>File: blog.html</p>
+                                    <p>Avaiable template variables</p>
+                                    <ul>
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.id }}</b> returns blog unique id</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.title }}</b> returns blog title</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.image }}</b> returns blog main image</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.body }}</b> returns blog post body (html)</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.timestamp }}</b> returns blog timestamp</p>
+                                        </li>
+                                                {% endraw %}
+                              
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.url }}</b> returns blog unique URL</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.hidden }}</b> returns visibility (0-Visible, 1-Hidden)</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.category }}</b> returns category (string)</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ blog.categories }}</b> returns category (iterable)</p>
+                                        </li>
+                                                {% endraw %}
+                              
+                                    </ul>
                                 </div><!--//section-block-->
                                  <div id="p3"  class="section-block">
+                                    <h2>Blog listing View</h2>
+                                    <p>File: blog-list.html</p>
+                                    <p>Avaiable template variables</p>
+                                    <ul>
+                                        <li>   {% raw %}
+                                            <p><b>{{ blogs }}</b> list of blog posts</p>
+                                        </li>
+                                                {% endraw %}                                    
+                                    </ul>
+                                    <p>Iterate through Blog posts object, example below</p>
+<pre class="border">
+{% raw %}
+<xmp>
+    {% for my_blogs in blogs %}            // jinja for-loop using blog list
+    {% set blog = setattribute('product', my_blogs) %}       // create a variable blog contains setattribute()
+    
+    <p>This is title: {{ blog.title }} with #{{ blog.id }} unique id</p>
+
+    {% endfor %}
+</xmp>
+{% endraw %}
+</pre>
                                 </div><!--//section-block-->
                                  <div id="p4"  class="section-block">
+                                    <h2>Single Product View</h2>
+                                    <p>File: product.html</p>
+                                    <p>Avaiable template variables</p>
+                                    <ul>
+                                        <li>   {% raw %}
+                                            <p><b>{{ product.id }}</b> returns product unique column id</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.title }}</b> returns product title</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.category }}</b> returns product category (str)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.variants }}</b> returns product variants (list)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.product_url }}</b> returns product url (user generated)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.product_urlsystem }}</b> returns product url (system generated)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.seo_description }}</b> returns seo description (str)</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ product.seo_keywords }}</b> returns product keywords (str)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.images }}</b> returns product images (list)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.mainimage }}</b> returns product main image path</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.variant_details }}</b> returns product variant information (dict)</p>
+                                        </li>
+                                                {% endraw %}
+                                        <li>   {% raw %}
+                                            <p><b>{{ product.timestamp }}</b> returns product timestamp (date and time)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.hidden }}</b> returns product hidden status (1/0, 1=hidden)</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.product_id }}</b> returns product system generated unique id</p>
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.body }}</b> returns product html body (description)
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.price }}</b> returns product price (string)
+                                        </li>
+                                                {% endraw %}
+                                         <li>   {% raw %}
+                                            <p><b>{{ product.stock }}</b> returns product stock count (inventory)
+                                        </li>
+                                                {% endraw %}
+ 
+                              
+                                    </ul>
                                 </div><!--//section-block-->
                                  <div id="p5"  class="section-block">
                                 </div><!--//section-block-->
@@ -359,22 +552,22 @@
                                             <a class="nav-link scrollto" href="#p1">Index view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em1">Single Blog view</a>
+                                            <a class="nav-link scrollto" href="#p2">Single Blog view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em2">Blogs list view</a>
+                                            <a class="nav-link scrollto" href="#p3">Blogs list view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em3">Single Product view</a>
+                                            <a class="nav-link scrollto" href="#p4">Single Product view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em4">Products list view</a>
+                                            <a class="nav-link scrollto" href="#p5">Products list view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em5">Product similar view</a>
+                                            <a class="nav-link scrollto" href="#p6">Product similar view</a>
 	                                    </li>
 	                                    <li class="nav-item">
-                                            <a class="nav-link scrollto" href="#temp-em6">Order success view</a>
+                                            <a class="nav-link scrollto" href="#p7">Order success view</a>
 	                                    </li>
 	                                    <!-- <li class="nav-item">
                                             <a class="nav-link scrollto" href="#less">Endpoints (POST)</a>
